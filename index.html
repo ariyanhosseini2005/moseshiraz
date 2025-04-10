@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای دیجیتال موزه شیراز</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>راهنمای دیجیتال موزه شیراز</h1>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">همه</button>
+            <button class="filter-btn" data-filter="video">ویدئو</button>
+            <button class="filter-btn" data-filter="podcast">پادکست</button>
+        </div>
+    </header>
+    <main class="container">
+        <div class="box" data-modal="modal1" data-type="video">
+            <img src="111.jpg" alt="تصویر تاریخچه موزه" loading="lazy">
+            <div class="box-content">
+                <span class="label">ویدئو</span>
+                <h3>تاریخچه موزه</h3>
+                <p>معرفی گذشته موزه</p>
+            </div>
+        </div>
+        <div class="box" data-modal="modal2" data-type="podcast">
+            <img src="111.jpg" alt="تصویر آثار باستانی" loading="lazy">
+            <div class="box-content">
+                <span class="label">پادکست</span>
+                <h3>آثار باستانی</h3>
+                <p>توضیح آثار ارزشمند</p>
+            </div>
+        </div>
+        <div class="box" data-modal="modal3" data-type="video">
+            <img src="111.jpg" alt="تصویر معماری موزه" loading="lazy">
+            <div class="box-content">
+                <span class="label">ویدئو</span>
+                <h3>معماری بنا</h3>
+                <p>طراحی ساختمان موزه</p>
+            </div>
+        </div>
+        <div class="box" data-modal="modal4" data-type="podcast">
+            <img src="111.jpg" alt="تصویر باغ موزه" loading="lazy">
+            <div class="box-content">
+                <span class="label">پادکست</span>
+                <h3>باغ موزه</h3>
+                <p>فضاهای سبز اطراف</p>
+            </div>
+        </div>
+        <div class="box" data-modal="modal5" data-type="video">
+            <img src="111.jpg" alt="تصویر نمایشگاه‌ها" loading="lazy">
+            <div class="box-content">
+                <span class="label">ویدئو</span>
+                <h3>نمایشگاه‌ها</h3>
+                <p>رویدادهای موقت</p>
+            </div>
+        </div>
+        <div class="box" data-modal="modal6" data-type="podcast">
+            <img src="111.jpg" alt="تصویر فرهنگ شیراز" loading="lazy">
+            <div class="box-content">
+                <span class="label">پادکست</span>
+                <h3>فرهنگ شیراز</h3>
+                <p>سنت‌های محلی</p>
+            </div>
+        </div>
+        <div class="box" data-modal="modal7" data-type="video">
+            <img src="111.jpg" alt="تصویر مرمت آثار" loading="lazy">
+            <div class="box-content">
+                <span class="label">ویدئو</span>
+                <h3>مرمت آثار</h3>
+                <p>فرآیند بازسازی</p>
+            </div>
+        </div>
+        <div class="box" data-modal="modal8" data-type="podcast">
+            <img src="111.jpg" alt="تصویر داستان‌های موزه" loading="lazy">
+            <div class="box-content">
+                <span class="label">پادکست</span>
+                <h3>داستان‌های موزه</h3>
+                <p>روایت‌های تاریخی</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- مودال نمونه (توسعه‌یافته) -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-top" aria-label="بستن مودال">×</span>
+            <h2>تاریخچه موزه</h2>
+            <p class="description">موزه شیراز در سال ۱۳۵۰ تأسیس شد و مجموعه‌ای از آثار تاریخی را در خود جای داده است.</p>
+            <div class="media-container">
+                <video controls data-media-id="history-video">
+                    <source src="history-video.mp4" type="video/mp4">
+                    مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+                </video>
+                <div class="media-list">
+                    <div class="media-item" data-src="history-video.mp4" data-type="video">ویدئو اصلی - ۵:۳۰</div>
+                    <div class="media-item" data-src="history-podcast.mp3" data-type="audio">پادکست مرتبط - ۳:۱۵</div>
+                </div>
+            </div>
+            <div class="extra-info">
+                <h4>جزئیات بیشتر</h4>
+                <p>این بخش شامل آثار دوره هخامنشی و ساسانی است.</p>
+            </div>
+            <div class="actions">
+                <button aria-label="افزودن به علاقه‌مندی‌ها"><i class="bi bi-heart"></i></button>
+                <button aria-label="دانلود"><i class="bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-top" aria-label="بستن مودال">×</span>
+            <h2>آثار باستانی</h2>
+            <p class="description">توضیحاتی درباره آثار باستانی موجود در موزه.</p>
+            <div class="media-container">
+                <audio controls data-media-id="artifacts-podcast">
+                    <source src="artifacts-podcast.mp3" type="audio/mp3">
+                    مرورگر شما از پادکست پشتیبانی نمی‌کند.
+                </audio>
+                <div class="media-list">
+                    <div class="media-item" data-src="artifacts-podcast.mp3" data-type="audio">پادکست اصلی - ۳:۱۵</div>
+                    <div class="media-item" data-src="artifacts-video.mp4" data-type="video">ویدئو مرتبط - ۴:۰۰</div>
+                </div>
+            </div>
+            <div class="extra-info">
+                <h4>جزئیات بیشتر</h4>
+                <p>آثاری از دوره‌های مختلف تاریخی.</p>
+            </div>
+            <div class="actions">
+                <button aria-label="افزودن به علاقه‌مندی‌ها"><i class="bi bi-heart"></i></button>
+                <button aria-label="دانلود"><i class="bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- مودال‌های دیگر به همین شکل ادامه می‌یابند -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-top" aria-label="بستن مودال">×</span>
+            <h2>معماری بنا</h2>
+            <p class="description">طراحی منحصربه‌فرد ساختمان موزه شیراز.</p>
+            <div class="media-container">
+                <video controls data-media-id="architecture-video">
+                    <source src="architecture-video.mp4" type="video/mp4">
+                    مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+                </video>
+                <div class="media-list">
+                    <div class="media-item" data-src="architecture-video.mp4" data-type="video">ویدئو اصلی - ۶:۰۰</div>
+                </div>
+            </div>
+            <div class="extra-info">
+                <h4>جزئیات بیشتر</h4>
+                <p>الهام گرفته از معماری پارسی.</p>
+            </div>
+            <div class="actions">
+                <button aria-label="افزودن به علاقه‌مندی‌ها"><i class="bi bi-heart"></i></button>
+                <button aria-label="دانلود"><i class="bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close-top" aria-label="بستن مودال">×</span>
+            <h2>باغ موزه</h2>
+            <p class="description">فضاهای سبز و باغ‌های اطراف موزه.</p>
+            <div class="media-container">
+                <audio controls data-media-id="garden-podcast">
+                    <source src="garden-podcast.mp3" type="audio/mp3">
+                    مرورگر شما از پادکست پشتیبانی نمی‌کند.
+                </audio>
+                <div class="media-list">
+                    <div class="media-item" data-src="garden-podcast.mp3" data-type="audio">پادکست اصلی - ۲:۴۵</div>
+                </div>
+            </div>
+            <div class="extra-info">
+                <h4>جزئیات بیشتر</h4>
+                <p>باغ‌هایی با طراحی سنتی.</p>
+            </div>
+            <div class="actions">
+                <button aria-label="افزودن به علاقه‌مندی‌ها"><i class="bi bi-heart"></i></button>
+                <button aria-label="دانلود"><i class="bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close-top" aria-label="بستن مودال">×</span>
+            <h2>نمایشگاه‌ها</h2>
+            <p class="description">رویدادهای موقت و نمایشگاه‌های موزه.</p>
+            <div class="media-container">
+                <video controls data-media-id="exhibits-video">
+                    <source src="exhibits-video.mp4" type="video/mp4">
+                    مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+                </video>
+                <div class="media-list">
+                    <div class="media-item" data-src="exhibits-video.mp4" data-type="video">ویدئو اصلی - ۴:۳۰</div>
+                </div>
+            </div>
+            <div class="extra-info">
+                <h4>جزئیات بیشتر</h4>
+                <p>نمایشگاه‌های فصلی و موضوعی.</p>
+            </div>
+            <div class="actions">
+                <button aria-label="افزودن به علاقه‌مندی‌ها"><i class="bi bi-heart"></i></button>
+                <button aria-label="دانلود"><i class="bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close-top" aria-label="بستن مودال">×</span>
+            <h2>فرهنگ شیراز</h2>
+            <p class="description">سنت‌ها و فرهنگ محلی شیراز.</p>
+            <div class="media-container">
+                <audio controls data-media-id="culture-podcast">
+                    <source src="culture-podcast.mp3" type="audio/mp3">
+                    مرورگر شما از پادکست پشتیبانی نمی‌کند.
+                </audio>
+                <div class="media-list">
+                    <div class="media-item" data-src="culture-podcast.mp3" data-type="audio">پادکست اصلی - ۳:۰۰</div>
+                </div>
+            </div>
+            <div class="extra-info">
+                <h4>جزئیات بیشتر</h4>
+                <p>معرفی آداب و رسوم.</p>
+            </div>
+            <div class="actions">
+                <button aria-label="افزودن به علاقه‌مندی‌ها"><i class="bi bi-heart"></i></button>
+                <button aria-label="دانلود"><i class="bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close-top" aria-label="بستن مودال">×</span>
+            <h2>مرمت آثار</h2>
+            <p class="description">فرآیند بازسازی و مرمت آثار موزه.</p>
+            <div class="media-container">
+                <video controls data-media-id="restoration-video">
+                    <source src="restoration-video.mp4" type="video/mp4">
+                    مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+                </video>
+                <div class="media-list">
+                    <div class="media-item" data-src="restoration-video.mp4" data-type="video">ویدئو اصلی - ۵:۰۰</div>
+                </div>
+            </div>
+            <div class="extra-info">
+                <h4>جزئیات بیشتر</h4>
+                <p>تکنیک‌های مرمت حرفه‌ای.</p>
+            </div>
+            <div class="actions">
+                <button aria-label="افزودن به علاقه‌مندی‌ها"><i class="bi bi-heart"></i></button>
+                <button aria-label="دانلود"><i class="bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close-top" aria-label="بستن مودال">×</span>
+            <h2>داستان‌های موزه</h2>
+            <p class="description">روایت‌های تاریخی مرتبط با موزه.</p>
+            <div class="media-container">
+                <audio controls data-media-id="stories-podcast">
+                    <source src="stories-podcast.mp3" type="audio/mp3">
+                    مرورگر شما از پادکست پشتیبانی نمی‌کند.
+                </audio>
+                <div class="media-list">
+                    <div class="media-item" data-src="stories-podcast.mp3" data-type="audio">پادکست اصلی - ۴:۱۵</div>
+                </div>
+            </div>
+            <div class="extra-info">
+                <h4>جزئیات بیشتر</h4>
+                <p>داستان‌هایی از گذشته.</p>
+            </div>
+            <div class="actions">
+                <button aria-label="افزودن به علاقه‌مندی‌ها"><i class="bi bi-heart"></i></button>
+                <button aria-label="دانلود"><i class="bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- پلیر حرفه‌ای -->
+    <div class="player-container">
+        <div class="player-content">
+            <img src="111.jpg" alt="تصویر محتوای در حال پخش" class="player-thumb">
+            <div class="player-info">
+                <span class="player-title">در حال پخش: عنوان</span>
+                <span class="player-duration">۰:۰۰ / ۰:۰۰</span>
+            </div>
+            <div class="player-controls">
+                <button class="player-btn" id="play-pause"><i class="bi bi-play-fill"></i></button>
+                <input type="range" class="player-seek" min="0" max="100" value="0">
+                <button class="player-btn"><i class="bi bi-volume-up"></i></button>
+                <input type="range" class="player-volume" min="0" max="100" value="100">
+                <button class="player-btn"><i class="bi bi-shuffle"></i></button>
+                <button class="player-btn"><i class="bi bi-repeat"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

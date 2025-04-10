@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background: #f5e8d0;
+    color: #333;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+header {
+    background: #8b5e3c;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid #6b4e31;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.filter-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    background: #6b4e31;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #d4a373;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    gap: 1rem;
+    width: 95%;
+    margin: 1rem auto;
+    padding-bottom: 5rem; /* فضای بیشتر برای پلیر */
+}
+
+.box {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.box-content {
+    padding: 0.75rem;
+}
+
+.box-content .label {
+    background: #8b5e3c;
+    color: #fff;
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.box-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.box-content p {
+    font-size: 0.875rem;
+    color: #6b4e31;
+}
+
+/* استایل مودال توسعه‌یافته */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.modal-content h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.modal-content .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.media-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.media-container video, .media-container audio {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.media-list {
+    width: 100%;
+    max-width: 600px;
+}
+
+.media-item {
+    padding: 0.75rem;
+    background: #f5e8d0;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.media-item:hover {
+    background: #d4a373;
+}
+
+.extra-info {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.extra-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.close-top {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #8b5e3c;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.close-top:hover {
+    background: #d4a373;
+}
+
+/* استایل پلیر */
+.player-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #6b4e31;
+    color: #fff;
+    padding: 1rem;
+    z-index: 100;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.player-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.player-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.player-info {
+    flex: 1;
+}
+
+.player-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.player-duration {
+    font-size: 0.875rem;
+    color: #d4a373;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.player-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.player-btn:hover {
+    color: #d4a373;
+}
+
+.player-seek, .player-volume {
+    width: 100px;
+    accent-color: #d4a373;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        grid-template-columns: repeat(3, 31%);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 48%);
+    }
+    .player-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .player-seek, .player-volume {
+        width: 80px;
+    }
+}
